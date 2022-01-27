@@ -31,12 +31,13 @@ const DogStyles = styled.div`
   }
 `;
 
-export default function Dog() {
+export default function Dog({ details }) {
+  const { name, breed, born } = details;
   return (
     <DogStyles>
       <div className="dog__img"></div>
       <div className="dog__name">
-        <h2>Name</h2>
+        <h2>{name}</h2>
       </div>
     </DogStyles>
   );

@@ -14,7 +14,7 @@ const HomeStyles = styled.main`
     margin-top: 10px;
   }
   .dogs {
-    margin-top: 40px;
+    margin: 40px 0;
     div + div {
       margin-top: 30px;
     }
