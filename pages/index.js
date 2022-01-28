@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import Dog from '../components/Dog';
+import Card from '../components/Card';
 import HomeStyles from '../components/styles/HomeStyles';
 import dogs from '../lib/dogs';
 
+// main page
 export default function Home() {
   return (
     <HomeStyles>
@@ -12,7 +13,7 @@ export default function Home() {
         </section>
         <section className="dogs">
           {Object.keys(dogs).map((dog) => (
-            <Dog details={dogs[dog]} key={dog}></Dog>
+            <Card details={dogs[dog]} key={dog}></Card>
           ))}
         </section>
       </div>
