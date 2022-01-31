@@ -1,38 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimateSharedLayout, AnimateShareLayout, motion } from 'framer-motion';
-import styled from 'styled-components';
-
-// Card main styles
-const CardStyles = styled.div`
-  display: block;
-  height: 250px;
-  width: 250px;
-  border-radius: 10px;
-  background: black;
-  position: relative;
-  cursor: pointer;
-  .card__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border-radius: 10px;
-  }
-  .card__name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-`;
+import card from './styles/Card.module.css'; // Card Styles in Module CSS
 
 // Card Component
 export default function Card({ details }) {
@@ -45,12 +13,12 @@ export default function Card({ details }) {
     <AnimateSharedLayout>
       {open ? (
         <motion.div
-          className="expanded-card"
+          className={card.expanded}
           onClick={() => setOpen(false)}
           layoutId="expandable-card"
         >
           <motion.h1
-            className="expanded-card__name"
+            className={card.expanded_name}
             layoutId="expandable-card-h"
           >
             {name}
@@ -58,11 +26,11 @@ export default function Card({ details }) {
         </motion.div>
       ) : (
         <motion.div
-          className="normal-card"
+          className={card.normal}
           onClick={() => setOpen(true)}
           layoutId="expandable-card"
         >
-          <motion.h1 className="normal-card__name" layoutId="expandable-card-h">
+          <motion.h1 className={card.normal_name} layoutId="expandable-card-h">
             {name}
           </motion.h1>
         </motion.div>
