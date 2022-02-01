@@ -7,11 +7,11 @@ import home from '../styles/Home.module.css';
 export default function Home() {
   return (
     <main>
-      <div className="container">
-        <section className="header">
-          <h1 className={home.title}>Dogs</h1>
+      <div className={home.container}>
+        <section className={home.header}>
+          <h1 className={home.header_title}>Dogs</h1>
         </section>
-        <section className="dogs">
+        <section className={home.dogs}>
           {Object.keys(dogs).map((dog) => (
             <Card details={dogs[dog]} key={dog}></Card>
           ))}
