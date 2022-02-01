@@ -1,7 +1,11 @@
 /* CONTAINER */
-.container {
-  max-width: calc(375px - 60px);
-  margin: 0 auto;
+
+/* MAIN CONTAINER*/
+.home {
+  width: 100%;
+  position: relative;
+  border: 3px red solid;
+  padding: 0 25px;
 }
 
 /* HEADER */

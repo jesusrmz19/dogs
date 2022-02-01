@@ -6,7 +6,7 @@ import home from '../styles/Home.module.css';
 // main page
 export default function Home() {
   return (
-    <main>
+    <main className={home.home}>
       <div className={home.container}>
         <section className={home.header}>
           <h1 className={home.header_title}>Dogs</h1>
