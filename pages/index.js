@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import Card from '../components/Card';
-import HomeStyles from '../components/styles/HomeStyles';
 import dogs from '../lib/dogs';
+import home from '../styles/Home.module.css';
 
 // main page
 export default function Home() {
   return (
-    <HomeStyles>
+    <main>
       <div className="container">
         <section className="header">
-          <h1>Dogs</h1>
+          <h1 className={home.title}>Dogs</h1>
         </section>
         <section className="dogs">
           {Object.keys(dogs).map((dog) => (
@@ -17,6 +17,6 @@ export default function Home() {
           ))}
         </section>
       </div>
-    </HomeStyles>
+    </main>
   );
 }
