@@ -13,7 +13,7 @@ export default function Home() {
         </section>
         <section className={home.dogs}>
           {Object.keys(dogs).map((dog) => (
-            <Card details={dogs[dog]} key={dog}></Card>
+            <Card details={dogs[dog]} key={dog} value={'red'}></Card>
           ))}
         </section>
       </div>

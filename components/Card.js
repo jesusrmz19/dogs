@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { AnimateSharedLayout, AnimateShareLayout, motion } from 'framer-motion';
+import { AnimateSharedLayout, motion } from 'framer-motion';
 import card from './styles/Card.module.css'; // Card Styles in Module CSS
 
 // Card Component

@@ -1,3 +1,5 @@
+/* */
+
 /* Card Test CSS */
 .normal {
   display: block;
@@ -9,7 +11,6 @@
   cursor: pointer;
 }
 .normal_name {
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -26,12 +27,11 @@
   background: black;
   top: 0px;
   left: 0px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 100;
 }
 .expanded_name {
-  position: absolute;
   top: 20px;
   left: 20px;
   width: 100%;
