@@ -6,11 +6,11 @@
   height: 250px;
   width: 250px;
   border-radius: 10px;
-  background: black;
   position: relative;
   cursor: pointer;
 }
 .normal_name {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -21,6 +21,7 @@
   align-items: center;
   color: white;
   text-transform: uppercase;
+  background: black;
 }
 .expanded {
   position: absolute;
@@ -30,6 +31,9 @@
   width: 100vw;
   height: 100vh;
   z-index: 100;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 1fr;
 }
 .expanded_name {
   top: 20px;
@@ -41,4 +45,17 @@
   justify-content: center;
   align-items: center;
   color: white;
+  text-transform: uppercase;
+  background: black;
+  border-radius: 0px;
+}
+.expanded_description {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 30px;
+}
+
+.expanded_description__table {
+  display: flex;
 }

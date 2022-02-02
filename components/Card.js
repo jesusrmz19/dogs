@@ -8,31 +8,52 @@ export default function Card({ details }) {
   // de la expansión del Card
   const [open, setOpen] = useState(false);
 
-  const { name, breed, born } = details;
+  const { name, breed, born, desc, size, imgClass, img } = details;
   return (
     <AnimateSharedLayout>
       {open ? (
         <motion.div
-          className={card.expanded}
+          className={`${card.expanded}`}
           onClick={() => setOpen(false)}
           layoutId="expandable-card"
         >
-          <motion.h1
+          <motion.h2
             className={card.expanded_name}
             layoutId="expandable-card-h"
           >
             {name}
-          </motion.h1>
+          </motion.h2>
+          <div className={card.expanded_description}>
+            <h3>{name}</h3>
+            <div className={card.expanded_description__table}>
+              <p>{breed}</p>
+              <p>{size}</p>
+              <p>{born}</p>
+            </div>
+            <div className={card.expanded_description__txt}>
+              <p>{desc}</p>
+            </div>
+          </div>
         </motion.div>
       ) : (
         <motion.div
           className={card.normal}
+          style={
+            img
+              ? {
+                  background: `url(${img})  no-repeat center`,
+                  backgroundSize: `cover`,
+                }
+              : {
+                  background: 'black',
+                }
+          }
           onClick={() => setOpen(true)}
           layoutId="expandable-card"
         >
-          <motion.h1 className={card.normal_name} layoutId="expandable-card-h">
+          <motion.h2 className={card.normal_name} layoutId="expandable-card-h">
             {name}
-          </motion.h1>
+          </motion.h2>
         </motion.div>
       )}
     </AnimateSharedLayout>
